@@ -16,13 +16,14 @@ const Hero = () => {
         <img className="image" src={ret2} alt="retangulo" />
         <img className="image" src={ret3} alt="retangulo" />
         <InfoContainer>
-          <Title fontFamily={fonts.bungee} fontSize="82px">
-            aqui não se
-          </Title>
-          <br />
-          <Title fontFamily={fonts.bebas} fontSize="102px">
-            treina fofo
-          </Title>
+          <div className="titleClass">
+            <Title fontFamily={fonts.bungee} fontSize="82px">
+              aqui não se
+            </Title>
+            <Title fontFamily={fonts.bebas} fontSize="102px">
+              treina fofo
+            </Title>
+          </div>
           <p>
             Transforme-se na nossa academia! Oferecemos equipamentos modernos,
             instrutores qualificados e aulas para todos os níveis. Alcance seus

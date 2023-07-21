@@ -43,6 +43,11 @@ export const HeroContainer = styled(Container)`
 export const InfoContainer = styled.div`
   margin-top: 214px;
   height: 272px;
+
+  .titleClass {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const SpanStyled = styled.span`
