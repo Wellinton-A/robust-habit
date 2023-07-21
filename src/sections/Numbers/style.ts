@@ -26,7 +26,7 @@ export const NumberContainer = styled(Container)`
       width: 100%;
       display: flex;
       gap: 50px;
-      margin-top: 70px;
+      margin-top: 50px;
     }
 
     .card {

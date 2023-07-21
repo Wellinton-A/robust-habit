@@ -1,5 +1,11 @@
+import { ContainerFooter, FooterSection } from './style'
+
 const Footer = () => {
-  return
+  return (
+    <FooterSection>
+      <ContainerFooter></ContainerFooter>
+    </FooterSection>
+  )
 }
 
 export default Footer
