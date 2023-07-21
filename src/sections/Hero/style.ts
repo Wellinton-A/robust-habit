@@ -50,11 +50,12 @@ export const InfoContainer = styled.div`
 `
 
 export const SpanStyled = styled.span`
+  display: block;
   font-size: 32px;
   font-family: ${fonts.bebas};
   color: ${colors.white};
   background-color: ${colors.secondary};
-  width: 187px;
+  width: 157px;
   height: 54px;
   padding: 8px 0 8px 24px;
   position: relative;
