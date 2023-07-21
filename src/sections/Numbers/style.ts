@@ -14,7 +14,7 @@ export const NumberContainer = styled(Container)`
   color: ${colors.white};
 
   .infos {
-    margin-top: 174px;
+    margin-top: 154px;
     max-width: 814px;
 
     p {
