@@ -10,7 +10,7 @@ const MenuMobile = () => {
   }
 
   return (
-    <MenuSection isMenuOpen={isMenuOpen.toString()}>
+    <MenuSection ismenuopen={isMenuOpen.toString()}>
       <CloseIcon onClick={handleCloseMenu} size={40} color="#fff"/>
       <nav>
         <ul>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import InputMask from 'react-input-mask';
 import { fonts } from '../../global-style/global.style'
 import Title from '../../components/Title'
 
@@ -15,17 +16,38 @@ const Contact = () => {
   const [phone, setPhone] = useState<string>('')
   const [contactInfo, setContactInfo] = useState<any>()
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [invalidForm, setInvalidForm] = useState<boolean>(false)
 
   const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInvalidForm(false)
     setName(e.target.value)
   }
 
   const handlePhone = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInvalidForm(false)
     setPhone(e.target.value)
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setInvalidForm(false)
+
+    if (name.length <= 3) {
+      alert('Seu nome deve conter mais de 3 digitos!')
+      return setInvalidForm(true)
+    }
+
+    if (phone === '') {
+      alert('Seu telefone deve conter 11 digitos!')
+      return setInvalidForm(true)
+    }
+
+    for (let i = 0; i < phone.length; i++) {
+      if (phone[i] === '_') {
+        alert('Seu telefone deve conter 11 digitos!')
+        return setInvalidForm(true)
+    }
+    }
 
     const contact = {
       name,
@@ -43,7 +65,7 @@ const Contact = () => {
 
   return (
     <ContactSection>
-      <ContactContainer>
+      <ContactContainer error={invalidForm.toString()}>
         <div className="containerForm">
           {isLoading ? (
             <SpinnerContainer>
@@ -73,6 +95,7 @@ const Contact = () => {
                     <div className='inputHolderOutside'>
                       <div className='inputHolderInside'>
                         <input
+                          className='input'
                           type="text"
                           placeholder="nome"
                           value={name}
@@ -82,7 +105,9 @@ const Contact = () => {
                     </div>
                     <div className='inputHolderOutside'>
                       <div className='inputHolderInside'>
-                        <input
+                        <InputMask
+                          className='input'
+                          mask={'(99) 99999-9999'}
                           type="text"
                           placeholder="telefone"
                           value={phone}

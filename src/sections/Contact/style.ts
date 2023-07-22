@@ -1,6 +1,10 @@
 import { keyframes, styled } from 'styled-components'
 import { Container, colors, fonts } from '../../global-style/global.style'
 
+type Props = {
+  error: string
+}
+
 export const ContactSection = styled.section`
   height: 468px;
   background-color: ${colors.secondary};
@@ -14,7 +18,7 @@ export const ContactSection = styled.section`
   }
 `
 
-export const ContactContainer = styled(Container)`
+export const ContactContainer = styled(Container)<Props>`
   position: relative;
   height: 100%;
   display: flex;
@@ -46,7 +50,7 @@ export const ContactContainer = styled(Container)`
 
       .inputHolderOutside {
         clip-path: polygon(88% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
-        background-color: ${colors.white};
+        background-color: ${(props) => props.error === 'true' ? colors.main : colors.white};
         width: 234px;
         height: 42px;
         display: flex;
@@ -54,7 +58,7 @@ export const ContactContainer = styled(Container)`
         align-items: center;
         transition: clip-path 0.5s ease;
 
-        &:focus input {
+        &:focus .input {
           clip-path: polygon(88% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
           transition: clip-path 0.5s ease;
         }
@@ -77,7 +81,7 @@ export const ContactContainer = styled(Container)`
       }
 
 
-      input {
+      .input {
         width: 204px;
         height: 42px;
         background-color: transparent;
@@ -189,4 +193,8 @@ export const SpinnerContainer = styled.div`
   text-align: center;
   animation: ${spinAnimation} 2s infinite linear;
   margin-left: 150px;
+
+  @media (max-width: 767px) {
+    margin: 100px auto;
+  }
 `

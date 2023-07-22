@@ -4,7 +4,7 @@ import { IoCloseSharp } from 'react-icons/io5'
 import { colors, fonts } from "../../global-style/global.style";
 
 type Props = {
-  isMenuOpen: string
+  ismenuopen: string
 }
 
 export const MenuSection = styled.div<Props>`
@@ -14,7 +14,7 @@ export const MenuSection = styled.div<Props>`
   background-color: ${colors.main};
   opacity: 0.95;
   z-index: 5;
-  display: ${(props) => props.isMenuOpen === 'true' ? 'flex' : 'none'};
+  display: ${(props) => props.ismenuopen === 'true' ? 'flex' : 'none'};
   align-items: center;
   justify-content: center;
 
