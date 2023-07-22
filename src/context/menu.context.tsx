@@ -15,7 +15,7 @@ export const IsMenuOpenContext = createContext<IsMenuOpenType>({
 })
 
 const IsMenuOpenProvider = ({ children }: Props) => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true)
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
   const values: IsMenuOpenType = {
     isMenuOpen,
