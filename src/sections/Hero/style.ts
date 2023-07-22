@@ -4,6 +4,10 @@ import { Container, colors, fonts } from '../../global-style/global.style'
 export const HeroSection = styled.section`
   height: 700px;
   background-color: ${colors.main};
+
+  @media (max-width: 767px) {
+    height: 800PX;
+  }
 `
 
 export const HeroContainer = styled(Container)`
@@ -53,7 +57,7 @@ export const HeroContainer = styled(Container)`
     }
 
     .image {
-      max-width: 110%;
+      max-width: 100%;
       right: -30px;
     }
 
@@ -63,20 +67,30 @@ export const HeroContainer = styled(Container)`
     }
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 767px) {
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 
     .bodyImage {
-      max-height: 350px;
-      max-width: 268px;
+      right: 0;
     }
 
     .image {
-      max-width: 100%;
-      right: -30px;
+      display: none;
     }
 
     p {
-      max-width: 300px;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 490px) {
+
+    .bodyImage {
+      max-width: 210px;
+      max-height: 290px;
     }
   }
 `
@@ -93,7 +107,11 @@ export const InfoContainer = styled.div`
 
   @media (max-width: 1300px) {
     position: absolute;
-    margin-top: 80px;
+    margin-top: 150px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 150px;
   }
 `
 
@@ -119,5 +137,12 @@ export const SpanStyled = styled.span`
     width: 20px;
     height: 20px;
     margin-left: 12px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    height: fit-content;
+    width: 150px;
+    padding: 8px;
   }
 `

@@ -4,6 +4,10 @@ import { Container, colors, fonts } from '../../global-style/global.style'
 export const NumberSection = styled.section`
   height: 658px;
   background-color: ${colors.main};
+
+  @media (max-width: 767px) {
+    height: fit-content;
+  }
 `
 
 export const NumberContainer = styled(Container)`
@@ -73,7 +77,7 @@ export const NumberContainer = styled(Container)`
 
   @media (max-width: 1300px) {
     .infos {
-      margin-top: 10px;
+      margin-top: 100px;
       position: absolute;
       max-width: 400px;
 
@@ -92,9 +96,39 @@ export const NumberContainer = styled(Container)`
       }
     }
 
-
     .bodyImg {
       width: 230px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .infos {
+      max-width: 80%;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .bodyImg {
+      position: relative;
+    }
+
+    .cardContainerInfo {
+      flex-wrap: wrap;
+    }
+
+    .imagesRec1 {
+      display: none;
+    }
+
+    .imagesRec2 {
+      display: none;
+    }
+
+    .imagesRec3 {
+      display: none;
     }
   }
 `

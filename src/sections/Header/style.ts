@@ -1,4 +1,6 @@
 import { styled } from 'styled-components'
+import { BiMenuAltLeft } from 'react-icons/bi'
+
 import { Container, colors, fonts } from '../../global-style/global.style'
 
 export const HeaderStyled = styled.header`
@@ -20,6 +22,7 @@ export const HeaderContainer = styled(Container)`
   color: ${colors.white};
   font-size: 24px;
   background-color: transparent;
+  position: relative;
 
   div {
     display: flex;
@@ -45,6 +48,10 @@ export const HeaderContainer = styled(Container)`
         font-size: 24px;
         margin-right: 30px;
         background-color: transparent;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -70,5 +77,39 @@ export const HeaderContainer = styled(Container)`
     ul li a{
       font-size: 16px;
     }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size:  16px;
+      width: 110px;
+      height: 40px;
+      padding: 0;
+
+    }
   }
+
+  @media (max-width: 767px) {
+
+    img {
+      width: 80px;
+      height: 40px;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+`
+
+export const MenuIcon = styled(BiMenuAltLeft)`
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: -10px;
+}
 `

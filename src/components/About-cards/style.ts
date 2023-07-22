@@ -77,4 +77,9 @@ export const CardContainer = styled.div`
       margin-left: 12px;
     }
   }
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    height: fit-content;
+  }
 `

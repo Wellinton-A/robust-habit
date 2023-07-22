@@ -33,4 +33,19 @@ export const AboutContainer = styled(Container)`
       margin-bottom: 50px;
     }
   }
+
+  @media (max-width: 767px) {
+    .cardsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+  }
 `

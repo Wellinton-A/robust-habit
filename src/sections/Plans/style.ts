@@ -30,6 +30,7 @@ export const PlansContainer = styled(Container)`
     .cardsContainerPlans {
       display: block;
       margin-top: 30px;
+      max-width: 80%;
     }
   }
 `

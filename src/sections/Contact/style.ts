@@ -8,6 +8,10 @@ export const ContactSection = styled.section`
   @media (max-width: 1300px) {
     height: fit-content;
   }
+
+  @media (max-width: 767px) {
+    height: fit-content;
+  }
 `
 
 export const ContactContainer = styled(Container)`
@@ -115,6 +119,26 @@ export const ContactContainer = styled(Container)`
   }
 
   @media (max-width: 1300px) {
+
+    .containerForm {
+      margin-bottom: 30px;
+      max-width: 350px;
+
+      form {
+        flex-direction: column;
+      }
+    }
+
+    .bodyWomanImage {
+      width: 350px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .containerForm {
       margin-bottom: 30px;

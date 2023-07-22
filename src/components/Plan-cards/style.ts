@@ -42,8 +42,19 @@ export const CardContainerPlan = styled.div<Props>`
   }
 
   @media (max-width: 1300px) {
-    justify-content: last baseline;
     margin-top: ${(props) => (props.recommended === 'true' ? 0 : 40)}px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+
+    .recommended {
+      font-size: 12px;
+    }
+
+    .passPlan {
+      font-size: 30px;
+    }
   }
 `
 
@@ -80,5 +91,27 @@ export const ValuesContainer = styled.div<Props>`
       props.recommended === 'true' ? colors.red : colors.greyLetters};
     text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: ${(props) =>
+        props.recommended === 'true' ? colors.red : colors.greyLetters};
+      color: ${colors.white}
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    gap: 15px;
+    height: fit-content;
+    font-size: 18px;
+
+    .infos {
+      max-width: 150px;
+    }
+
+    .select {
+      font-size: 14px;
+    }
   }
 `

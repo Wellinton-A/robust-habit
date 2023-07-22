@@ -30,6 +30,7 @@ export const ContainerFooter = styled(Container)`
   }
 
   p {
+    text-align: center;
     color: ${colors.white};
     font-family: ${fonts.montserrat};
     font-size: 12px;
