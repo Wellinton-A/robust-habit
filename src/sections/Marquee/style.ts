@@ -17,6 +17,18 @@ export const MarqueeSection = styled.section`
   @media (max-width: 1620px) {
     font-size: 24px;
   }
+
+  @media (max-width: 1400px) {
+    font-size: 20px;
+
+    img {
+      margin: 0 20px;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    font-size: 16px;
+  }
 `
 
 export const MarqueeContainer = styled.div`

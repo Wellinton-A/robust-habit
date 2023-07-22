@@ -70,18 +70,26 @@ const Contact = () => {
                     Matricule-se agora mesmo! Fale com um de nossos atendentes
                   </p>
                   <form onSubmit={handleSubmit}>
-                    <input
-                      type="text"
-                      placeholder="nome"
-                      value={name}
-                      onChange={handleName}
-                    />
-                    <input
-                      type="text"
-                      placeholder="telefone"
-                      value={phone}
-                      onChange={handlePhone}
-                    />
+                    <div className='inputHolderOutside'>
+                      <div className='inputHolderInside'>
+                        <input
+                          type="text"
+                          placeholder="nome"
+                          value={name}
+                          onChange={handleName}
+                        />
+                      </div>
+                    </div>
+                    <div className='inputHolderOutside'>
+                      <div className='inputHolderInside'>
+                        <input
+                          type="text"
+                          placeholder="telefone"
+                          value={phone}
+                          onChange={handlePhone}
+                        />
+                      </div>
+                    </div>
                     <button type="submit">solicitar contato</button>
                   </form>
                 </>

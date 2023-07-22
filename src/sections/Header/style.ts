@@ -53,22 +53,22 @@ export const HeaderContainer = styled(Container)`
     padding: 8px 0px 8px 30px;
     background-color: ${colors.secondary};
     position: relative;
-    width: 127px;
+    width: 157px;
     height: 44px;
     margin-right: 25px;
     position: relative;
     cursor: pointer;
+    clip-path: polygon(82% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+    transition: clip-path 0.5s ease;
 
-    &:before {
-      content: '';
-      position: absolute;
-      right: -25px;
-      bottom: 0;
-      width: 0;
-      height: 0;
-      border-left: 25px solid ${colors.secondary};
-      border-top: 19px solid transparent;
-      border-bottom: 25px solid ${colors.secondary};
+    &:hover {
+      clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+    }
+  }
+
+  @media (max-width: 1300px) {
+    ul li a{
+      font-size: 16px;
     }
   }
 `

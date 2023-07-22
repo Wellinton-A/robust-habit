@@ -5,6 +5,10 @@ import { Container, colors } from '../../global-style/global.style'
 export const PlansSection = styled.section`
   height: 660px;
   background-color: ${colors.secondary};
+
+  @media (max-width: 1300px) {
+    height: fit-content;
+  }
 `
 
 export const PlansContainer = styled(Container)`
@@ -18,8 +22,14 @@ export const PlansContainer = styled(Container)`
 
   .cardsContainerPlans {
     display: flex;
-    flex-wrap: wrap;
     gap: 40px;
     margin-top: 60px;
+  }
+
+  @media (max-width: 1300px) {
+    .cardsContainerPlans {
+      display: block;
+      margin-top: 30px;
+    }
   }
 `

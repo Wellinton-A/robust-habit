@@ -38,6 +38,47 @@ export const HeroContainer = styled(Container)`
     max-width: 690px;
     margin-bottom: 28px;
   }
+
+  @media (max-width: 1440px) {
+    .image {
+      right: -10px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+
+    .bodyImage {
+      max-height: 350px;
+      max-width: 268px;
+    }
+
+    .image {
+      max-width: 110%;
+      right: -30px;
+    }
+
+    p {
+      margin-top: 60px;
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+
+    .bodyImage {
+      max-height: 350px;
+      max-width: 268px;
+    }
+
+    .image {
+      max-width: 100%;
+      right: -30px;
+    }
+
+    p {
+      max-width: 300px;
+    }
+  }
 `
 
 export const InfoContainer = styled.div`
@@ -49,6 +90,11 @@ export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
   }
+
+  @media (max-width: 1300px) {
+    position: absolute;
+    margin-top: 80px;
+  }
 `
 
 export const SpanStyled = styled.span`
@@ -57,22 +103,16 @@ export const SpanStyled = styled.span`
   font-family: ${fonts.bebas};
   color: ${colors.white};
   background-color: ${colors.secondary};
-  width: 157px;
+  width: 187px;
   height: 54px;
   padding: 8px 0 8px 24px;
   position: relative;
   cursor: pointer;
+  clip-path: polygon(82% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+  transition: clip-path 0.5s ease;
 
-  &:before {
-    content: '';
-    position: absolute;
-    right: -30px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 30px solid ${colors.secondary};
-    border-top: 30px solid transparent;
-    border-bottom: 25px solid ${colors.secondary};
+  &:hover {
+    clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
   }
 
   img {

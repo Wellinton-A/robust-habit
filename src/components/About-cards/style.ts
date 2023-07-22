@@ -6,30 +6,36 @@ export const CardContainer = styled.div`
   height: 346px;
   background-color: transparent;
   color: ${colors.white};
-  padding: 24px 0 30px 24px;
+  padding: 24px 10px 30px 24px;
+  transition: background-color 0.9s ease-in-out;
 
   &:hover {
     background-color: ${colors.secondary};
-    transition: background-color 0.9s ease;
+
+    button {
+      background-color: ${colors.red};
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+    }
   }
 
-  &:hover span {
-    background-color: ${colors.red};
-    transition: background-color 0.9s ease;
+  .iconHolder {
+    max-width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &:before {
-      border-left: 30px solid ${colors.red};
-      border-top: 29px solid transparent;
-      border-bottom: 25px solid ${colors.red};
-      transition: border-left 0.9s ease, border-top 0.9s ease,
-        border-bottom 0.9s ease;
-    }
   }
 
   .icon {
     width: 77px;
     height: 77px;
     margin-bottom: 10px;
+    transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
   }
 
   h4 {
@@ -44,30 +50,25 @@ export const CardContainer = styled.div`
     margin-bottom: 27px;
   }
 
-  span {
+  button {
     display: flex;
     font-size: 16px;
     font-family: ${fonts.bebas};
     color: ${colors.white};
     background-color: ${colors.secondary};
-    max-width: 157px;
+    max-width: 187px;
     height: 54px;
-    padding: 8px 0 8px 15px;
+    padding: 8px 32px 8px 15px;
     position: relative;
     cursor: pointer;
     align-items: center;
+    border: none;
     justify-content: space-between;
+    clip-path: polygon(82% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+    transition: clip-path 0.5s ease, background-color 0.9s ease;
 
-    &:before {
-      content: '';
-      position: absolute;
-      right: -30px;
-      bottom: 0;
-      width: 0;
-      height: 0;
-      border-left: 30px solid ${colors.secondary};
-      border-top: 29px solid transparent;
-      border-bottom: 25px solid ${colors.secondary};
+    &:hover {
+      clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
     }
 
     img {

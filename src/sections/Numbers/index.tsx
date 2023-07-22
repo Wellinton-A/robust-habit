@@ -1,11 +1,12 @@
 import { NumberContainer, NumberSection } from './style'
 
+import { fonts } from '../../global-style/global.style'
+
 import rec1 from '../../assets/images_robust/Rectangle16.png'
 import rec2 from '../../assets/images_robust/Rectangle17.png'
 import rec3 from '../../assets/images_robust/Rectangle18.png'
 import body from '../../assets/images_robust/pngwing2.png'
 import Title from '../../components/Title'
-import { fonts } from '../../global-style/global.style'
 
 const Numbers = () => {
   return (

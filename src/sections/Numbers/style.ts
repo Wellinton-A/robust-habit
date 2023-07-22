@@ -33,6 +33,7 @@ export const NumberContainer = styled(Container)`
       display: flex;
       flex-direction: column;
       width: 218px;
+
       span:first-child {
         font-size: 62px;
         font-family: ${fonts.bebas};
@@ -68,5 +69,32 @@ export const NumberContainer = styled(Container)`
     position: absolute;
     left: 0;
     bottom: 0;
+  }
+
+  @media (max-width: 1300px) {
+    .infos {
+      margin-top: 10px;
+      position: absolute;
+      max-width: 400px;
+
+      .cardContainerInfo {
+        margin-top: 30px;
+        gap: 15px;
+      }
+
+      .card {
+
+        span:first-child {
+          font-size: 32px;
+          font-family: ${fonts.bebas};
+          margin-left: 15px;
+        }
+      }
+    }
+
+
+    .bodyImg {
+      width: 230px;
+    }
   }
 `

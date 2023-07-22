@@ -10,13 +10,15 @@ const AboutCard = ({ aboutCard }: Props) => {
   const { title, icon, about, more, alt } = aboutCard
   return (
     <CardContainer>
-      <img src={icon} alt={alt} />
+      <div className='iconHolder'>
+        <img className='icon' src={icon} alt={alt} />
+      </div>
       <h4>{title}</h4>
       <p>{about}</p>
-      <span>
+      <button>
         {more}
         <img src={arrow} alt="arrow icon" />
-      </span>
+      </button>
     </CardContainer>
   )
 }

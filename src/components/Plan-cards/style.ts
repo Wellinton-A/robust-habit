@@ -40,6 +40,11 @@ export const CardContainerPlan = styled.div<Props>`
     font-size: 42px;
     padding: 10px 0 10px 21px;
   }
+
+  @media (max-width: 1300px) {
+    justify-content: last baseline;
+    margin-top: ${(props) => (props.recommended === 'true' ? 0 : 40)}px;
+  }
 `
 
 export const ValuesContainer = styled.div<Props>`

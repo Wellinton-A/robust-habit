@@ -4,6 +4,10 @@ import { Container, colors, fonts } from '../../global-style/global.style'
 export const ContactSection = styled.section`
   height: 468px;
   background-color: ${colors.secondary};
+
+  @media (max-width: 1300px) {
+    height: fit-content;
+  }
 `
 
 export const ContactContainer = styled(Container)`
@@ -36,8 +40,41 @@ export const ContactContainer = styled(Container)`
       flex-wrap: wrap;
       gap: 30px;
 
-      input {
+      .inputHolderOutside {
+        clip-path: polygon(88% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+        background-color: ${colors.white};
         width: 234px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: clip-path 0.5s ease;
+
+        &:focus input {
+          clip-path: polygon(88% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+          transition: clip-path 0.5s ease;
+        }
+
+        .inputHolderInside {
+          clip-path: polygon(88% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+          transition: clip-path 0.5s ease;
+          background-color: ${colors.secondary};
+          width: 232px;
+          height: 40px;
+        }
+
+        .inputHolderInside:focus-within {
+          clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+        }
+      }
+
+    .inputHolderOutside:focus-within {
+        clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+      }
+
+
+      input {
+        width: 204px;
         height: 42px;
         background-color: transparent;
         outline: none;
@@ -45,7 +82,8 @@ export const ContactContainer = styled(Container)`
         font-family: ${fonts.montserrat};
         font-size: 18px;
         padding: 10px 18px;
-        border: 1px solid ${colors.white};
+        border: none;
+
 
         &::placeholder {
           text-transform: uppercase;
@@ -53,7 +91,7 @@ export const ContactContainer = styled(Container)`
       }
 
       button {
-        width: 204px;
+        width: 234px;
         height: 42px;
         margin-top: 20px;
         padding: 2px;
@@ -66,20 +104,39 @@ export const ContactContainer = styled(Container)`
         background-color: ${colors.contactButtonColor};
         border: none;
         cursor: pointer;
+        clip-path: polygon(88% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
+        transition: clip-path 0.5s ease;
 
-        &:before {
-          content: '';
-          position: absolute;
-          right: -30px;
-          bottom: 0;
-          width: 0;
-          height: 0;
-          border-left: 30px solid ${colors.contactButtonColor};
-          border-top: 17px solid transparent;
-          border-bottom: 25px solid ${colors.contactButtonColor};
+        &:hover {
+          clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
         }
       }
     }
+  }
+
+  @media (max-width: 1300px) {
+
+    .containerForm {
+      margin-bottom: 30px;
+      max-width: 350px;
+
+      form {
+        flex-direction: column;
+      }
+    }
+
+    .bodyWomanImage {
+      width: 250px;
+    }
+  }
+`
+
+export const LoadingContainer = styled.div`
+  margin: 100px auto;
+
+  img {
+    width: 300px;
+    height: 300px;
   }
 `
 
